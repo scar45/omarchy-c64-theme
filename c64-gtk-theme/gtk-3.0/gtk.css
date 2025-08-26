@@ -1,0 +1,196 @@
+/* C64 GTK3 Theme - Enhanced with proper spacing and contrast */
+/* Uses only C64 blue colors: #4140E4 (dark) and #A4A3FF (light) */
+
+/* Import GTK 3.20 styles for better compatibility */
+@import url('../gtk-3.20/gtk-dark.css');
+
+/* Base styling with proper padding */
+* {
+    color: #A4A3FF;
+    background-color: #4140E4;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Window styling with proper spacing */
+window {
+    background-color: #4140E4;
+    color: #A4A3FF;
+    padding: 4px;
+}
+
+/* Enhanced button styling with proper spacing and states */
+button {
+    background-color: #4140E4;
+    color: #A4A3FF;
+    border: 2px solid #A4A3FF;
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin: 2px;
+    min-height: 24px;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #4F4EE6;
+    border-color: #B8B7FF;
+}
+
+button:active {
+    background-color: #3937E1;
+    border-color: #A4A3FF;
+}
+
+button:focus {
+    outline: 2px solid #A4A3FF;
+    outline-offset: 2px;
+}
+
+button:disabled {
+    background-color: #4A49E5;
+    color: #7673E9;
+    border-color: #8A88ED;
+    opacity: 0.6;
+}
+
+/* Enhanced entry styling with focus states */
+entry {
+    background-color: #4140E4;
+    color: #A4A3FF;
+    border: 2px solid #A4A3FF;
+    border-radius: 4px;
+    padding: 2px 4px;
+    margin: 2px;
+    min-height: 24px;
+}
+
+entry:focus {
+    border-color: #B8B7FF;
+    background-color: #4443E4;
+    outline: none;
+}
+
+entry:disabled {
+    background-color: #4A49E5;
+    color: #7673E9;
+    border-color: #8A88ED;
+}
+
+entry selection {
+    background-color: #A4A3FF;
+    color: #4140E4;
+}
+
+/* Enhanced menu styling */
+menu,
+menubar {
+    background-color: #4140E4;
+    color: #A4A3FF;
+    border: 1px solid #A4A3FF;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+menuitem {
+    background-color: transparent;
+    color: #A4A3FF;
+    padding: 2px 8px;
+    margin: 1px;
+    border-radius: 4px;
+}
+
+menuitem:hover {
+    background-color: #A4A3FF;
+    color: #4140E4;
+}
+
+menuitem:disabled {
+    color: #7673E9;
+}
+
+/* Enhanced toolbar styling */
+toolbar {
+    background-color: #4140E4;
+    color: #A4A3FF;
+    border-bottom: 1px solid #A4A3FF;
+    padding: 2px;
+}
+
+/* Enhanced scrollbar styling */
+scrollbar {
+    background-color: #635FE7;
+    border-radius: 4px;
+}
+
+scrollbar slider {
+    background-color: #918FEE;
+    border: 1px solid #837FEC;
+    border-radius: 4px;
+    min-width: 12px;
+    min-height: 12px;
+}
+
+scrollbar slider:hover {
+    background-color: #A4A3FF;
+    border-color: #A4A3FF;
+}
+
+scrollbar slider:active {
+    background-color: #7E7BEB;
+}
+
+/* Enhanced selection styling */
+selection {
+    background-color: #A4A3FF;
+    color: #4140E4;
+}
+
+/* Additional widget enhancements */
+label {
+    color: #A4A3FF;
+    padding: 1px;
+}
+
+checkbutton check {
+    background-color: #4140E4;
+    border: 2px solid #A4A3FF;
+    border-radius: 4px;
+    min-width: 18px;
+    min-height: 18px;
+    margin: 4px;
+}
+
+checkbutton check:checked {
+    background-color: #A4A3FF;
+    color: #4140E4;
+}
+
+radiobutton radio {
+    background-color: #4140E4;
+    border: 2px solid #A4A3FF;
+    border-radius: 50%;
+    min-width: 18px;
+    min-height: 18px;
+    margin: 4px;
+}
+
+radiobutton radio:checked {
+    background-color: #A4A3FF;
+    color: #4140E4;
+}
+
+/* Separator styling */
+separator {
+    background-color: #A4A3FF;
+    min-width: 1px;
+    min-height: 1px;
+}
+
+separator.horizontal {
+    margin: 4px 0;
+}
+
+separator.vertical {
+    margin: 0 4px;
+}

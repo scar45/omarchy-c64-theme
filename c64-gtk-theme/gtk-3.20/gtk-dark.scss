@@ -1,0 +1,279 @@
+// C64 GTK Theme - Main dark theme file
+// Based on Dracula GTK theme structure with C64 color scheme
+
+// Import all component stylesheets
+@import 'colors';
+@import 'common';
+@import 'widgets';
+@import 'scrollbars';
+@import 'menus';
+
+// Window decorations
+.titlebar,
+headerbar {
+  background-color: $bg_color;
+  color: $text_color;
+  border-bottom: 1px solid $borders_color;
+  border-radius: 0;
+  padding: $base_padding;
+  min-height: 40px;
+  
+  &:backdrop {
+    background-color: $backdrop_bg_color;
+    color: $backdrop_text_color;
+    border-color: $backdrop_borders_color;
+  }
+  
+  // Window controls
+  button.titlebutton {
+    background-color: transparent;
+    border: none;
+    color: $text_color;
+    min-width: 20px;
+    min-height: 20px;
+    padding: $small_padding;
+    margin: 0 2px;
+    border-radius: 50%;
+    
+    &:hover {
+      background-color: $hover_bg_color;
+    }
+    
+    &:active {
+      background-color: $active_bg_color;
+    }
+    
+    &.close {
+      &:hover {
+        background-color: $error_color;
+        color: $c64_dark_blue;
+      }
+    }
+    
+    &.maximize,
+    &.minimize {
+      &:hover {
+        background-color: $c64_light_blue;
+        color: $c64_dark_blue;
+      }
+    }
+  }
+  
+  // Title
+  .title {
+    font-weight: bold;
+    color: $text_color;
+    padding: 0 $large_padding;
+  }
+  
+  .subtitle {
+    color: mix($text_color, $bg_color, 70%);
+    font-size: smaller;
+  }
+}
+
+// Toolbars
+toolbar {
+  background-color: $bg_color;
+  color: $text_color;
+  border: none;
+  padding: $small_padding;
+  
+  &.horizontal {
+    border-bottom: 1px solid $borders_color;
+  }
+  
+  &.vertical {
+    border-right: 1px solid $borders_color;
+  }
+  
+  separator {
+    background-color: $borders_color;
+    
+    &.horizontal {
+      min-height: 1px;
+      margin: 0 $base_padding;
+    }
+    
+    &.vertical {
+      min-width: 1px;
+      margin: $base_padding 0;
+    }
+  }
+}
+
+// Notebooks (tabs)
+notebook {
+  background-color: $bg_color;
+  
+  header {
+    background-color: $bg_color;
+    border: 1px solid $borders_color;
+    
+    &.top {
+      border-bottom: 1px solid $borders_color;
+    }
+    
+    &.bottom {
+      border-top: 1px solid $borders_color;
+    }
+    
+    &.left {
+      border-right: 1px solid $borders_color;
+    }
+    
+    &.right {
+      border-left: 1px solid $borders_color;
+    }
+    
+    tabs {
+      background-color: transparent;
+      
+      tab {
+        background-color: transparent;
+        color: mix($text_color, $bg_color, 70%);
+        border: none;
+        padding: $base_padding $large_padding;
+        margin: 0;
+        
+        &:hover {
+          background-color: $hover_bg_color;
+          color: $text_color;
+        }
+        
+        &:checked {
+          background-color: $bg_color;
+          color: $text_color;
+          border-bottom: 2px solid $c64_light_blue;
+        }
+        
+        &:backdrop {
+          color: $backdrop_text_color;
+          
+          &:checked {
+            color: $backdrop_text_color;
+            border-color: mix($c64_light_blue, $backdrop_bg_color, 50%);
+          }
+        }
+        
+        button.flat {
+          min-width: 20px;
+          min-height: 20px;
+          padding: 2px;
+          margin-left: $small_padding;
+          color: mix($text_color, $bg_color, 60%);
+          
+          &:hover {
+            background-color: $error_color;
+            color: $c64_dark_blue;
+          }
+        }
+      }
+    }
+  }
+  
+  > stack {
+    background-color: $bg_color;
+    border: 1px solid $borders_color;
+    border-top: none;
+  }
+}
+
+// List boxes and tree views
+listbox,
+list {
+  background-color: $bg_color;
+  color: $text_color;
+  border: 1px solid $borders_color;
+  border-radius: $border_radius;
+  
+  row {
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    padding: $base_padding;
+    
+    &:hover {
+      background-color: $hover_bg_color;
+    }
+    
+    &:active {
+      background-color: $active_bg_color;
+    }
+    
+    &:selected {
+      background-color: $selected_bg_color;
+      color: $selected_fg_color;
+      
+      &:hover {
+        background-color: mix($selected_bg_color, #FFFFFF, 90%);
+      }
+    }
+    
+    &:disabled {
+      color: $insensitive_text_color;
+      background-color: transparent;
+    }
+  }
+  
+  // Separators in lists
+  separator {
+    background-color: $borders_color;
+    min-height: 1px;
+    margin: 0;
+  }
+}
+
+// Tree views
+treeview {
+  background-color: $bg_color;
+  color: $text_color;
+  border: 1px solid $borders_color;
+  
+  &:selected {
+    background-color: $selected_bg_color;
+    color: $selected_fg_color;
+  }
+  
+  header {
+    background-color: mix($bg_color, $borders_color, 95%);
+    color: $text_color;
+    border-bottom: 1px solid $borders_color;
+    
+    button {
+      background-color: transparent;
+      color: inherit;
+      border: none;
+      border-right: 1px solid $borders_color;
+      border-radius: 0;
+      padding: $base_padding;
+      
+      &:hover {
+        background-color: $hover_bg_color;
+      }
+      
+      &:active {
+        background-color: $active_bg_color;
+      }
+      
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+  
+  expander {
+    min-width: 16px;
+    min-height: 16px;
+    -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+    color: mix($text_color, $bg_color, 70%);
+    
+    &:checked {
+      -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+    }
+    
+    &:hover {
+      color: $text_color;
+    }
+  }
+}

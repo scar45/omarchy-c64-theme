@@ -1,0 +1,133 @@
+// Common styles and spacing definitions
+@import 'colors';
+
+// Base spacing units for consistent padding/margins
+$base_padding: 8px;
+$small_padding: 4px;
+$large_padding: 16px;
+$xlarge_padding: 24px;
+
+// Border radius
+$border_radius: 4px;
+$large_border_radius: 8px;
+
+// Base styling
+* {
+  padding: 0;
+  -gtk-icon-style: symbolic;
+  outline-color: transparentize($focus_border_color, 0.3);
+  outline-style: dashed;
+  outline-offset: -3px;
+  outline-width: 1px;
+  -gtk-outline-radius: $border_radius;
+}
+
+// Base window styling
+.background {
+  color: $text_color;
+  background-color: $bg_color;
+}
+
+// Base text styling
+* {
+  color: $text_color;
+  background-color: $bg_color;
+}
+
+// Focus styling
+*:focus {
+  outline-color: $focus_border_color;
+  outline-style: solid;
+  outline-width: 2px;
+}
+
+// Disabled state
+*:disabled {
+  color: $insensitive_text_color;
+  background-color: $insensitive_bg_color;
+  opacity: 0.6;
+}
+
+// Selection styling  
+*:selected {
+  background-color: $selected_bg_color;
+  color: $selected_fg_color;
+}
+
+// Link styling
+link {
+  color: $c64_light_blue;
+  
+  &:visited {
+    color: mix($c64_light_blue, $c64_dark_blue, 70%);
+  }
+  
+  &:hover {
+    color: mix($c64_light_blue, #FFFFFF, 80%);
+  }
+  
+  &:active {
+    color: $c64_light_blue;
+  }
+}
+
+// Backdrop states
+.background:backdrop {
+  color: $backdrop_text_color;
+  background-color: $backdrop_bg_color;
+}
+
+*:backdrop {
+  color: $backdrop_text_color;
+  background-color: $backdrop_bg_color;
+  opacity: 0.8;
+}
+
+// Separator styling
+separator {
+  background-color: $borders_color;
+  min-width: 1px;
+  min-height: 1px;
+  
+  &.horizontal {
+    min-height: 1px;
+    margin: $small_padding 0;
+  }
+  
+  &.vertical {
+    min-width: 1px;
+    margin: 0 $small_padding;
+  }
+}
+
+// Scrolled window
+scrolledwindow {
+  background-color: $bg_color;
+  border: 1px solid $borders_color;
+  border-radius: $border_radius;
+  
+  &.frame {
+    border: 1px solid $borders_color;
+  }
+  
+  viewport.frame {
+    border: 1px solid $borders_color;
+  }
+}
+
+// Frame
+.frame {
+  border: 1px solid $borders_color;
+  border-radius: $border_radius;
+  padding: $base_padding;
+  
+  &.flat {
+    border: none;
+  }
+}
+
+// Placements
+.floating {
+  border: 1px solid $borders_color;
+  border-radius: $large_border_radius;
+}

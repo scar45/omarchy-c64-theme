@@ -1,0 +1,117 @@
+// Scrollbar styling
+@import 'colors';
+
+scrollbar {
+  background-color: $scrollbar_bg_color;
+  border: none;
+  
+  &.overlay-indicator {
+    &:not(.dragging):not(.hovering) {
+      opacity: 0.8;
+      
+      slider {
+        min-width: 6px;
+        min-height: 6px;
+        margin: 2px;
+        border-radius: $border_radius;
+      }
+      
+      &.vertical slider {
+        min-width: 6px;
+        margin-left: 2px;
+        margin-right: 2px;
+      }
+      
+      &.horizontal slider {
+        min-height: 6px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+      }
+    }
+  }
+  
+  slider {
+    background-color: $scrollbar_slider_color;
+    border: 1px solid mix($scrollbar_slider_color, $c64_dark_blue, 80%);
+    border-radius: $border_radius;
+    min-width: 12px;
+    min-height: 12px;
+    
+    &:hover {
+      background-color: $scrollbar_slider_hover_color;
+      border-color: $c64_light_blue;
+    }
+    
+    &:active {
+      background-color: $scrollbar_slider_active_color;
+      border-color: $c64_light_blue;
+    }
+    
+    &:disabled {
+      background-color: $insensitive_bg_color;
+      border-color: $insensitive_borders_color;
+    }
+  }
+  
+  &.vertical {
+    slider {
+      min-width: 12px;
+      min-height: 40px;
+      margin: 2px;
+    }
+  }
+  
+  &.horizontal {
+    slider {
+      min-height: 12px;
+      min-width: 40px;
+      margin: 2px;
+    }
+  }
+  
+  // Scrollbar buttons (arrows)
+  button {
+    background-color: $scrollbar_bg_color;
+    color: $scrollbar_slider_color;
+    border: none;
+    min-width: 16px;
+    min-height: 16px;
+    padding: 0;
+    border-radius: 0;
+    
+    &:hover {
+      background-color: $hover_bg_color;
+      color: $scrollbar_slider_hover_color;
+    }
+    
+    &:active {
+      background-color: $active_bg_color;
+      color: $scrollbar_slider_hover_color;
+    }
+    
+    &:disabled {
+      background-color: $insensitive_bg_color;
+      color: $insensitive_text_color;
+    }
+  }
+  
+  // Range/junction styling
+  range.vertical {
+    slider {
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+  }
+  
+  range.horizontal {
+    slider {
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }
+  }
+  
+  junction {
+    background-color: $scrollbar_bg_color;
+    border: none;
+  }
+}

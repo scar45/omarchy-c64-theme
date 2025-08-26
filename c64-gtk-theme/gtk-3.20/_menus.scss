@@ -1,0 +1,210 @@
+// Menu and dropdown styling
+@import 'colors';
+
+// Menu bars
+menubar {
+  background-color: $bg_color;
+  color: $text_color;
+  border-bottom: 1px solid $borders_color;
+  padding: 0;
+  
+  > menuitem {
+    background-color: transparent;
+    color: $text_color;
+    border: none;
+    padding: $base_padding $large_padding;
+    margin: 0;
+    
+    &:hover {
+      background-color: $hover_bg_color;
+      color: $text_color;
+    }
+    
+    &:disabled {
+      color: $insensitive_text_color;
+    }
+  }
+}
+
+// Dropdown menus
+menu {
+  background-color: $bg_color;
+  color: $text_color;
+  border: 2px solid $borders_color;
+  border-radius: $border_radius;
+  padding: $small_padding;
+  margin: 0;
+  box-shadow: 0 4px 8px transparentize($c64_dark_blue, 0.3);
+  
+  menuitem {
+    background-color: transparent;
+    color: $text_color;
+    border: none;
+    border-radius: $border_radius;
+    padding: $base_padding $large_padding;
+    margin: 1px;
+    min-height: 20px;
+    
+    &:hover {
+      background-color: $selected_bg_color;
+      color: $selected_fg_color;
+    }
+    
+    &:disabled {
+      color: $insensitive_text_color;
+      background-color: transparent;
+    }
+    
+    &:selected {
+      background-color: $selected_bg_color;
+      color: $selected_fg_color;
+    }
+    
+    // Submenu arrows
+    arrow {
+      min-height: 16px;
+      min-width: 16px;
+      color: inherit;
+      
+      &:dir(ltr) {
+        -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+        margin-left: $base_padding;
+      }
+      
+      &:dir(rtl) {
+        -gtk-icon-source: -gtk-icontheme('pan-start-symbolic');
+        margin-right: $base_padding;
+      }
+    }
+    
+    // Accelerator labels (shortcuts)
+    accelerator {
+      color: mix($text_color, $bg_color, 70%);
+      margin-left: $xlarge_padding;
+    }
+  }
+  
+  // Menu separators
+  separator {
+    background-color: $borders_color;
+    margin: $small_padding $base_padding;
+    min-height: 1px;
+  }
+  
+  // Check and radio items in menus
+  menuitem {
+    check,
+    radio {
+      min-height: 16px;
+      min-width: 16px;
+      margin-right: $base_padding;
+      
+      &:checked {
+        color: $selected_bg_color;
+        -gtk-icon-source: -gtk-icontheme('object-select-symbolic');
+      }
+    }
+    
+    radio:checked {
+      -gtk-icon-source: -gtk-icontheme('object-select-symbolic');
+    }
+  }
+}
+
+// Context menus
+.context-menu {
+  background-color: $bg_color;
+  color: $text_color;
+  border: 2px solid $borders_color;
+  border-radius: $border_radius;
+  box-shadow: 0 4px 12px transparentize($c64_dark_blue, 0.2);
+}
+
+// Popup menus
+popover {
+  background-color: $bg_color;
+  color: $text_color;
+  border: 2px solid $borders_color;
+  border-radius: $large_border_radius;
+  padding: $base_padding;
+  box-shadow: 0 4px 16px transparentize($c64_dark_blue, 0.1);
+  
+  &.menu {
+    padding: $small_padding;
+  }
+  
+  // Arrow pointing to the triggering widget
+  arrow {
+    background-color: $bg_color;
+    border: 2px solid $borders_color;
+  }
+  
+  // Contents
+  .view,
+  list {
+    background-color: transparent;
+    color: inherit;
+  }
+  
+  separator {
+    background-color: $borders_color;
+    margin: $small_padding 0;
+  }
+  
+  // Backdrop state
+  &:backdrop {
+    background-color: $backdrop_bg_color;
+    color: $backdrop_text_color;
+    border-color: $backdrop_borders_color;
+  }
+}
+
+// Combo boxes
+combobox {
+  button.combo {
+    background-color: $bg_color;
+    color: $text_color;
+    border: 2px solid $borders_color;
+    border-radius: $border_radius;
+    padding: $base_padding;
+    
+    &:hover {
+      background-color: $hover_bg_color;
+      border-color: $borders_color;
+    }
+    
+    &:active {
+      background-color: $active_bg_color;
+      border-color: $borders_color;
+    }
+    
+    &:disabled {
+      background-color: $insensitive_bg_color;
+      color: $insensitive_text_color;
+      border-color: $insensitive_borders_color;
+    }
+    
+    arrow {
+      min-height: 16px;
+      min-width: 16px;
+      -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+      color: inherit;
+    }
+  }
+  
+  // Dropdown arrow only button
+  &.linked > button:not(:only-child) {
+    &:first-child {
+      border-right: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    
+    &:last-child {
+      border-left: none;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      padding: $base_padding $base_padding;
+    }
+  }
+}

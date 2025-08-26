@@ -1,0 +1,350 @@
+/* C64 GTK4 Theme */
+/* A faithful recreation of the classic Commodore 64 color scheme for GTK4 */
+
+/* Base C64 Colors */
+@define-color c64_dark_blue #4140E4;
+@define-color c64_light_blue #A4A3FF;
+
+/* Theme colors based on C64 palette */
+@define-color accent_bg_color @c64_light_blue;
+@define-color accent_fg_color @c64_dark_blue;
+@define-color accent_color @c64_light_blue;
+
+@define-color destructive_bg_color mix(@c64_light_blue, #FF6B6B, 0.6);
+@define-color destructive_fg_color @c64_dark_blue;
+@define-color destructive_color mix(@c64_light_blue, #FF6B6B, 0.6);
+
+@define-color success_bg_color mix(@c64_light_blue, #4ECDC4, 0.7);
+@define-color success_fg_color @c64_dark_blue;
+@define-color success_color mix(@c64_light_blue, #4ECDC4, 0.7);
+
+@define-color warning_bg_color mix(@c64_light_blue, #FFD700, 0.7);
+@define-color warning_fg_color @c64_dark_blue;
+@define-color warning_color mix(@c64_light_blue, #FFD700, 0.7);
+
+@define-color error_bg_color mix(@c64_light_blue, #FF6B6B, 0.6);
+@define-color error_fg_color @c64_dark_blue;
+@define-color error_color mix(@c64_light_blue, #FF6B6B, 0.6);
+
+@define-color window_bg_color @c64_dark_blue;
+@define-color window_fg_color @c64_light_blue;
+
+@define-color view_bg_color @c64_dark_blue;
+@define-color view_fg_color @c64_light_blue;
+
+@define-color headerbar_bg_color @c64_dark_blue;
+@define-color headerbar_fg_color @c64_light_blue;
+@define-color headerbar_border_color @c64_light_blue;
+@define-color headerbar_backdrop_color mix(@c64_dark_blue, #000000, 0.95);
+@define-color headerbar_shade_color rgba(0, 0, 0, 0.36);
+
+@define-color card_bg_color mix(@c64_dark_blue, @c64_light_blue, 0.95);
+@define-color card_fg_color @c64_light_blue;
+@define-color card_shade_color rgba(0, 0, 0, 0.36);
+
+@define-color dialog_bg_color @c64_dark_blue;
+@define-color dialog_fg_color @c64_light_blue;
+
+@define-color popover_bg_color @c64_dark_blue;
+@define-color popover_fg_color @c64_light_blue;
+
+@define-color shade_color rgba(0, 0, 0, 0.36);
+@define-color scrollbar_outline_color rgba(0, 0, 0, 0.5);
+
+/* Base styling */
+* {
+  color: @c64_light_blue;
+  background-color: @c64_dark_blue;
+  border-color: @c64_light_blue;
+  outline-color: @c64_light_blue;
+}
+
+window,
+.background {
+  color: @window_fg_color;
+  background-color: @window_bg_color;
+}
+
+/* Headers */
+headerbar,
+.titlebar {
+  color: @headerbar_fg_color;
+  background-color: @headerbar_bg_color;
+  border-bottom: 1px solid @headerbar_border_color;
+  box-shadow: inset 0 1px @headerbar_shade_color;
+}
+
+headerbar:backdrop,
+.titlebar:backdrop {
+  background-color: @headerbar_backdrop_color;
+  color: mix(@headerbar_fg_color, @headerbar_bg_color, 0.6);
+}
+
+/* Buttons */
+button {
+  color: @c64_light_blue;
+  background-color: @c64_dark_blue;
+  border: 1px solid @c64_light_blue;
+  border-radius: 0;
+  padding: 4px 8px;
+  margin: 1px;
+}
+
+button:hover {
+  background-color: mix(@c64_dark_blue, @c64_light_blue, 0.85);
+}
+
+button:active {
+  background-color: mix(@c64_dark_blue, #000000, 0.9);
+}
+
+button.suggested-action {
+  color: @accent_fg_color;
+  background-color: @accent_bg_color;
+  border-color: @accent_bg_color;
+}
+
+button.destructive-action {
+  color: @destructive_fg_color;
+  background-color: @destructive_bg_color;
+  border-color: @destructive_bg_color;
+}
+
+/* Entries */
+entry {
+  color: @c64_light_blue;
+  background-color: mix(@c64_dark_blue, @c64_light_blue, 0.95);
+  border: 1px solid @c64_light_blue;
+  border-radius: 0;
+  padding: 4px;
+}
+
+entry:focus {
+  border-color: @c64_light_blue;
+  box-shadow: none;
+}
+
+entry:disabled {
+  color: mix(@c64_light_blue, @c64_dark_blue, 0.5);
+  background-color: mix(@c64_dark_blue, @c64_light_blue, 0.95);
+  border-color: mix(@c64_light_blue, @c64_dark_blue, 0.8);
+}
+
+/* Text views */
+textview text {
+  color: @view_fg_color;
+  background-color: @view_bg_color;
+}
+
+textview border {
+  background-color: mix(@view_bg_color, @view_fg_color, 0.95);
+}
+
+/* Lists */
+listview,
+list {
+  color: @view_fg_color;
+  background-color: @view_bg_color;
+  border: 1px solid @c64_light_blue;
+}
+
+listview row,
+list row {
+  padding: 6px;
+}
+
+listview row:hover,
+list row:hover {
+  background-color: mix(@c64_dark_blue, @c64_light_blue, 0.85);
+}
+
+listview row:selected,
+list row:selected {
+  color: @accent_fg_color;
+  background-color: @accent_bg_color;
+}
+
+/* Scrollbars */
+scrollbar {
+  background-color: mix(@c64_dark_blue, @c64_light_blue, 0.95);
+  border: 1px solid @c64_light_blue;
+}
+
+scrollbar slider {
+  background-color: mix(@c64_light_blue, @c64_dark_blue, 0.8);
+  border: 1px solid @c64_light_blue;
+  border-radius: 2px;
+  min-height: 20px;
+  min-width: 20px;
+}
+
+scrollbar slider:hover {
+  background-color: @c64_light_blue;
+}
+
+scrollbar slider:active {
+  background-color: mix(@c64_light_blue, @c64_dark_blue, 0.7);
+}
+
+/* Switches */
+switch {
+  background-color: mix(@c64_dark_blue, @c64_light_blue, 0.9);
+  border: 1px solid @c64_light_blue;
+  border-radius: 0;
+}
+
+switch:checked {
+  background-color: @c64_light_blue;
+}
+
+switch slider {
+  background-color: @c64_light_blue;
+  border: 1px solid @c64_dark_blue;
+  border-radius: 0;
+}
+
+switch:checked slider {
+  background-color: @c64_dark_blue;
+}
+
+/* Check boxes and radio buttons */
+checkbutton check,
+radiobutton radio {
+  color: @c64_light_blue;
+  background-color: @c64_dark_blue;
+  border: 1px solid @c64_light_blue;
+}
+
+checkbutton check:checked,
+radiobutton radio:checked {
+  color: @c64_dark_blue;
+  background-color: @c64_light_blue;
+}
+
+/* Menus */
+popover.menu,
+menu {
+  color: @popover_fg_color;
+  background-color: @popover_bg_color;
+  border: 1px solid @c64_light_blue;
+  border-radius: 0;
+  padding: 2px;
+}
+
+popover.menu modelbutton,
+menu menuitem {
+  padding: 4px 8px;
+  border-radius: 0;
+}
+
+popover.menu modelbutton:hover,
+menu menuitem:hover {
+  color: @accent_fg_color;
+  background-color: @accent_bg_color;
+}
+
+/* Tooltips */
+tooltip {
+  color: @c64_light_blue;
+  background-color: mix(@c64_dark_blue, #000000, 0.85);
+  border: 1px solid @c64_light_blue;
+  border-radius: 0;
+  padding: 2px 4px;
+}
+
+/* Progress bars */
+progressbar {
+  background-color: mix(@c64_dark_blue, @c64_light_blue, 0.95);
+  border: 1px solid @c64_light_blue;
+  border-radius: 0;
+}
+
+progressbar progress {
+  background-color: @c64_light_blue;
+  border-radius: 0;
+}
+
+/* Scales/sliders */
+scale {
+  background-color: transparent;
+}
+
+scale trough {
+  background-color: mix(@c64_dark_blue, @c64_light_blue, 0.9);
+  border: 1px solid @c64_light_blue;
+  border-radius: 0;
+}
+
+scale slider {
+  background-color: @c64_light_blue;
+  border: 1px solid @c64_dark_blue;
+  border-radius: 0;
+  min-height: 16px;
+  min-width: 16px;
+}
+
+scale slider:hover {
+  background-color: mix(@c64_light_blue, white, 0.8);
+}
+
+/* Notebooks/tabs */
+notebook {
+  background-color: @view_bg_color;
+}
+
+notebook header {
+  background-color: mix(@c64_dark_blue, @c64_light_blue, 0.95);
+  border-bottom: 1px solid @c64_light_blue;
+}
+
+notebook tab {
+  color: mix(@c64_light_blue, @c64_dark_blue, 0.7);
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0;
+  padding: 4px 8px;
+}
+
+notebook tab:hover {
+  color: @c64_light_blue;
+  background-color: mix(@c64_dark_blue, @c64_light_blue, 0.9);
+}
+
+notebook tab:checked {
+  color: @c64_light_blue;
+  background-color: @view_bg_color;
+  border-color: @c64_light_blue;
+  border-bottom-color: @view_bg_color;
+}
+
+/* Separators */
+separator {
+  background-color: @c64_light_blue;
+  min-width: 1px;
+  min-height: 1px;
+}
+
+/* Selection styling */
+selection {
+  color: @accent_fg_color;
+  background-color: @accent_bg_color;
+}
+
+/* Focus ring */
+*:focus {
+  outline: 1px solid @c64_light_blue;
+  outline-offset: 0;
+}
+
+/* Disabled state */
+*:disabled {
+  color: mix(@c64_light_blue, @c64_dark_blue, 0.5);
+  background-color: mix(@c64_dark_blue, @c64_light_blue, 0.95);
+  opacity: 0.6;
+}
+
+/* Backdrop state */
+window:backdrop * {
+  color: mix(@c64_light_blue, @c64_dark_blue, 0.6);
+  background-color: mix(@c64_dark_blue, #000000, 0.95);
+}

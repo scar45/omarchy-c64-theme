@@ -1,0 +1,68 @@
+// C64 Color Scheme - Only two main colors with calculated variants
+$c64_dark_blue: #4140E4;
+$c64_light_blue: #A4A3FF;
+
+// Base colors
+$base_color: $c64_dark_blue;
+$text_color: $c64_light_blue;
+$bg_color: $c64_dark_blue;
+$fg_color: $c64_light_blue;
+
+// Interactive states (subtle variations of main colors)
+$selected_bg_color: $c64_light_blue;
+$selected_fg_color: $c64_dark_blue;
+$selected_borders_color: $c64_light_blue;
+
+// Hover states (slightly lighter/darker variants)
+$hover_bg_color: mix($c64_dark_blue, $c64_light_blue, 85%); // Slightly lighter dark blue
+$active_bg_color: mix($c64_dark_blue, #000000, 90%); // Slightly darker dark blue
+
+// Borders and separators
+$borders_color: $c64_light_blue;
+$alt_borders_color: mix($c64_light_blue, $c64_dark_blue, 70%);
+$borders_edge: $c64_light_blue;
+
+// Focus states
+$focus_border_color: $c64_light_blue;
+$focus_bg_color: mix($c64_dark_blue, $c64_light_blue, 95%);
+
+// Warning/Error states (using variations of main colors)
+$warning_color: mix($c64_light_blue, #FFD700, 70%); // Warmer light blue
+$error_color: mix($c64_light_blue, #FF6B6B, 60%); // Reddish light blue
+$success_color: mix($c64_light_blue, #4ECDC4, 70%); // Cyan-ish light blue
+
+// Backdrop states
+$backdrop_base_color: mix($c64_dark_blue, #000000, 95%);
+$backdrop_text_color: mix($c64_light_blue, $c64_dark_blue, 60%);
+$backdrop_bg_color: mix($c64_dark_blue, #000000, 95%);
+$backdrop_fg_color: mix($c64_light_blue, $c64_dark_blue, 60%);
+$backdrop_borders_color: mix($c64_light_blue, $c64_dark_blue, 70%);
+
+// Insensitive states
+$insensitive_base_color: mix($c64_dark_blue, $c64_light_blue, 90%);
+$insensitive_text_color: mix($c64_light_blue, $c64_dark_blue, 50%);
+$insensitive_bg_color: mix($c64_dark_blue, $c64_light_blue, 95%);
+$insensitive_fg_color: mix($c64_light_blue, $c64_dark_blue, 50%);
+$insensitive_borders_color: mix($c64_light_blue, $c64_dark_blue, 80%);
+
+// OSD (On Screen Display)
+$osd_text_color: $c64_light_blue;
+$osd_bg_color: transparentize($c64_dark_blue, 0.2);
+$osd_fg_color: $c64_light_blue;
+$osd_borders_color: $c64_light_blue;
+
+// Scrollbars
+$scrollbar_bg_color: mix($c64_dark_blue, $c64_light_blue, 95%);
+$scrollbar_slider_color: mix($c64_light_blue, $c64_dark_blue, 80%);
+$scrollbar_slider_hover_color: $c64_light_blue;
+$scrollbar_slider_active_color: mix($c64_light_blue, $c64_dark_blue, 70%);
+
+// Switch
+$switch_bg_color: mix($c64_dark_blue, $c64_light_blue, 90%);
+$switch_slider_color: $c64_light_blue;
+$switch_slider_active_color: $c64_dark_blue;
+
+// Tooltips
+$tooltip_borders_color: $c64_light_blue;
+$tooltip_bg_color: mix($c64_dark_blue, #000000, 85%);
+$tooltip_fg_color: $c64_light_blue;

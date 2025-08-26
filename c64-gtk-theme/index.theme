@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=C64
+Comment=A simple GTK3/GTK4 theme which aims to resemble a classic C64 interface
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=C64
+MetacityTheme=C64
+IconTheme=Yaru-blue
+CursorTheme=Adwaita
+ButtonLayout=:minimize,maximize,close

@@ -1,0 +1,855 @@
+/* C64 GTK Theme - Compiled Dark Theme */
+/* Based on Dracula GTK theme structure with C64 color scheme */
+
+/* Base colors and variables */
+* {
+  padding: 0;
+  -gtk-icon-style: symbolic;
+  outline-color: rgba(164, 163, 255, 0.7);
+  outline-style: solid;
+  outline-offset: -1px;
+  outline-width: 1px;
+  -gtk-outline-radius: 0;
+}
+
+/* Base styling */
+.background {
+  color: #A4A3FF;
+  background-color: #4140E4;
+}
+
+* {
+  color: #A4A3FF;
+  background-color: #4140E4;
+}
+
+*:focus {
+  outline-color: #A4A3FF;
+  outline-style: solid;
+  outline-width: 2px;
+}
+
+*:disabled {
+  color: #7673E9;
+  background-color: #4A49E5;
+  opacity: 0.6;
+}
+
+*:selected {
+  background-color: #A4A3FF;
+  color: #4140E4;
+}
+
+/* Links */
+link {
+  color: #A4A3FF;
+}
+
+link:visited {
+  color: #827FEB;
+}
+
+link:hover {
+  color: #B8B7FF;
+}
+
+link:active {
+  color: #A4A3FF;
+}
+
+/* Backdrop states */
+.background:backdrop {
+  color: #827FEB;
+  background-color: #3D3CE2;
+}
+
+*:backdrop {
+  color: #827FEB;
+  background-color: #3D3CE2;
+  opacity: 0.8;
+}
+
+/* Separators */
+separator {
+  background-color: #A4A3FF;
+  min-width: 1px;
+  min-height: 1px;
+}
+
+separator.horizontal {
+  min-height: 1px;
+  margin: 2px 0;
+}
+
+separator.vertical {
+  min-width: 1px;
+  margin: 0 2px;
+}
+
+/* Scrolled windows and frames */
+scrolledwindow {
+  background-color: #4140E4;
+  border: 1px solid #A4A3FF;
+  border-radius: 0;
+}
+
+scrolledwindow.frame {
+  border: 1px solid #A4A3FF;
+}
+
+scrolledwindow viewport.frame {
+  border: none;
+}
+
+.frame {
+  border: 1px solid #A4A3FF;
+  border-radius: 0;
+  padding: 0;
+}
+
+.frame.flat {
+  border: none;
+}
+
+.floating {
+  border: 1px solid #A4A3FF;
+  border-radius: 0;
+}
+
+/* Buttons */
+button {
+  background-color: #4140E4;
+  color: #A4A3FF;
+  border: 1px solid #A4A3FF;
+  border-radius: 0;
+  padding: 1px 4px;
+  min-height: 20px;
+  min-width: 16px;
+  margin: 1px;
+}
+
+button:hover {
+  background-color: #4F4EE6;
+  border-color: #A4A3FF;
+  color: #A4A3FF;
+}
+
+button:active {
+  background-color: #3937E1;
+  border-color: #A4A3FF;
+  color: #A4A3FF;
+}
+
+button:focus {
+  border-color: #A4A3FF;
+  outline: 1px solid #A4A3FF;
+  outline-offset: 0;
+}
+
+button:disabled {
+  background-color: #4A49E5;
+  color: #7673E9;
+  border-color: #8A88ED;
+}
+
+button.destructive-action {
+  background-color: #D19ACA;
+  color: #4140E4;
+  border-color: #D19ACA;
+}
+
+button.suggested-action {
+  background-color: #A4A3FF;
+  color: #4140E4;
+  border-color: #A4A3FF;
+}
+
+button.flat {
+  border: none;
+  background-color: transparent;
+}
+
+button.flat:hover {
+  background-color: #4F4EE6;
+}
+
+/* Entries (text inputs) */
+entry {
+  background-color: #4140E4;
+  color: #A4A3FF;
+  border: 1px solid #A4A3FF;
+  border-radius: 0;
+  padding: 1px 3px;
+  margin: 1px;
+  min-height: 20px;
+}
+
+entry:focus {
+  border-color: #A4A3FF;
+  background-color: #4443E4;
+  outline: none;
+}
+
+entry:disabled {
+  background-color: #4A49E5;
+  color: #7673E9;
+  border-color: #8A88ED;
+}
+
+entry.error {
+  border-color: #D19ACA;
+  color: #D19ACA;
+}
+
+entry.warning {
+  border-color: #D4C093;
+  color: #D4C093;
+}
+
+entry selection {
+  background-color: #A4A3FF;
+  color: #4140E4;
+}
+
+/* Labels */
+label {
+  color: #A4A3FF;
+  padding: 0;
+}
+
+label:disabled {
+  color: #7673E9;
+}
+
+label.dim-label {
+  color: #827FEB;
+}
+
+label selection {
+  background-color: #A4A3FF;
+  color: #4140E4;
+}
+
+/* Checkboxes */
+checkbutton check {
+  background-color: #4140E4;
+  border: 1px solid #A4A3FF;
+  border-radius: 0;
+  min-width: 16px;
+  min-height: 16px;
+  margin: 2px;
+}
+
+checkbutton check:checked {
+  background-color: #A4A3FF;
+  border-color: #A4A3FF;
+  color: #4140E4;
+  -gtk-icon-source: -gtk-icontheme('object-select-symbolic');
+}
+
+checkbutton check:hover {
+  border-color: #B8B7FF;
+}
+
+checkbutton check:disabled {
+  background-color: #4A49E5;
+  border-color: #8A88ED;
+}
+
+/* Radio buttons */
+radiobutton radio {
+  background-color: #4140E4;
+  border: 1px solid #A4A3FF;
+  border-radius: 0;
+  min-width: 16px;
+  min-height: 16px;
+  margin: 2px;
+}
+
+radiobutton radio:checked {
+  background-color: #A4A3FF;
+  border-color: #A4A3FF;
+  -gtk-icon-source: -gtk-icontheme('object-select-symbolic');
+}
+
+radiobutton radio:hover {
+  border-color: #B8B7FF;
+}
+
+radiobutton radio:disabled {
+  background-color: #4A49E5;
+  border-color: #8A88ED;
+}
+
+/* Switches */
+switch {
+  background-color: #6C6BE8;
+  border: 1px solid #A4A3FF;
+  border-radius: 0;
+  min-width: 40px;
+  min-height: 20px;
+  margin: 2px;
+}
+
+switch:checked {
+  background-color: #A4A3FF;
+  border-color: #A4A3FF;
+}
+
+switch slider {
+  background-color: #A4A3FF;
+  border: 1px solid #A4A3FF;
+  border-radius: 0;
+  min-width: 16px;
+  min-height: 16px;
+  margin: 1px;
+}
+
+switch:checked slider {
+  background-color: #4140E4;
+}
+
+switch:disabled {
+  background-color: #4A49E5;
+  border-color: #8A88ED;
+}
+
+switch:disabled slider {
+  background-color: #7673E9;
+}
+
+/* Progress bars */
+progressbar {
+  background-color: #6C6BE8;
+  border: 1px solid #A4A3FF;
+  border-radius: 0;
+  padding: 0;
+}
+
+progressbar progress {
+  background-color: #A4A3FF;
+  border-radius: 0;
+  min-height: 8px;
+}
+
+progressbar.vertical progress {
+  min-width: 8px;
+}
+
+/* Scales (sliders) */
+scale {
+  min-height: 16px;
+  min-width: 16px;
+  padding: 0;
+}
+
+scale trough {
+  background-color: #6C6BE8;
+  border: 1px solid #A4A3FF;
+  border-radius: 0;
+  min-height: 6px;
+  min-width: 6px;
+}
+
+scale highlight {
+  background-color: #A4A3FF;
+  border-radius: 0;
+}
+
+scale slider {
+  background-color: #A4A3FF;
+  border: 1px solid #4140E4;
+  border-radius: 0;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+scale slider:hover {
+  background-color: #B8B7FF;
+}
+
+scale slider:active {
+  background-color: #A4A3FF;
+  border-width: 2px;
+}
+
+scale.vertical trough {
+  min-width: 6px;
+}
+
+/* Scrollbars */
+scrollbar {
+  background-color: #635FE7;
+}
+
+scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
+  opacity: 0.8;
+}
+
+scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
+  min-width: 6px;
+  min-height: 6px;
+  margin: 2px;
+  border-radius: 4px;
+}
+
+scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
+  min-width: 6px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
+  min-height: 6px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+scrollbar slider {
+  background-color: #918FEE;
+  border: 1px solid #837FEC;
+  border-radius: 0;
+  min-width: 12px;
+  min-height: 12px;
+}
+
+scrollbar slider:hover {
+  background-color: #A4A3FF;
+  border-color: #A4A3FF;
+}
+
+scrollbar slider:active {
+  background-color: #7E7BEB;
+  border-color: #A4A3FF;
+}
+
+scrollbar slider:disabled {
+  background-color: #4A49E5;
+  border-color: #8A88ED;
+}
+
+scrollbar.vertical slider {
+  min-width: 12px;
+  min-height: 32px;
+  margin: 1px;
+}
+
+scrollbar.horizontal slider {
+  min-height: 12px;
+  min-width: 32px;
+  margin: 1px;
+}
+
+scrollbar button {
+  background-color: #635FE7;
+  color: #918FEE;
+  border: 1px solid #A4A3FF;
+  min-width: 12px;
+  min-height: 12px;
+  padding: 0;
+  border-radius: 0;
+}
+
+scrollbar button:hover {
+  background-color: #4F4EE6;
+  color: #A4A3FF;
+}
+
+scrollbar button:active {
+  background-color: #3937E1;
+  color: #A4A3FF;
+}
+
+scrollbar button:disabled {
+  background-color: #4A49E5;
+  color: #7673E9;
+}
+
+scrollbar junction {
+  background-color: #635FE7;
+  border: none;
+}
+
+/* Menu bars */
+menubar {
+  background-color: #4140E4;
+  color: #A4A3FF;
+  border-bottom: 1px solid #A4A3FF;
+  padding: 0;
+}
+
+menubar > menuitem {
+  background-color: transparent;
+  color: #A4A3FF;
+  border: none;
+  padding: 1px 4px;
+  margin: 0;
+}
+
+menubar > menuitem:hover {
+  background-color: #4F4EE6;
+  color: #A4A3FF;
+}
+
+menubar > menuitem:disabled {
+  color: #7673E9;
+}
+
+/* Dropdown menus */
+menu {
+  background-color: #4140E4;
+  color: #A4A3FF;
+  border: 1px solid #A4A3FF;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+menu menuitem {
+  background-color: transparent;
+  color: #A4A3FF;
+  border: none;
+  border-radius: 0;
+  padding: 1px 4px;
+  margin: 0;
+  min-height: 16px;
+}
+
+menu menuitem:hover {
+  background-color: #A4A3FF;
+  color: #4140E4;
+}
+
+menu menuitem:disabled {
+  color: #7673E9;
+  background-color: transparent;
+}
+
+menu menuitem:selected {
+  background-color: #A4A3FF;
+  color: #4140E4;
+}
+
+menu menuitem arrow {
+  min-height: 16px;
+  min-width: 16px;
+  color: inherit;
+}
+
+menu menuitem arrow:dir(ltr) {
+  -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+  margin-left: 8px;
+}
+
+menu menuitem arrow:dir(rtl) {
+  -gtk-icon-source: -gtk-icontheme('pan-start-symbolic');
+  margin-right: 8px;
+}
+
+menu menuitem accelerator {
+  color: #827FEB;
+  margin-left: 16px;
+}
+
+menu separator {
+  background-color: #A4A3FF;
+  margin: 2px 4px;
+  min-height: 1px;
+}
+
+menu menuitem check,
+menu menuitem radio {
+  min-height: 14px;
+  min-width: 14px;
+  margin-right: 4px;
+}
+
+menu menuitem check:checked,
+menu menuitem radio:checked {
+  color: #A4A3FF;
+  -gtk-icon-source: -gtk-icontheme('object-select-symbolic');
+}
+
+/* Window decorations */
+.titlebar,
+headerbar {
+  background-color: #4140E4;
+  color: #A4A3FF;
+  border-bottom: 1px solid #A4A3FF;
+  border-radius: 0;
+  padding: 1px;
+  min-height: 28px;
+}
+
+.titlebar:backdrop,
+headerbar:backdrop {
+  background-color: #3D3CE2;
+  color: #827FEB;
+  border-color: #8A88ED;
+}
+
+.titlebar button.titlebutton,
+headerbar button.titlebutton {
+  background-color: transparent;
+  border: 1px solid #A4A3FF;
+  color: #A4A3FF;
+  min-width: 16px;
+  min-height: 16px;
+  padding: 2px;
+  margin: 0 1px;
+  border-radius: 0;
+}
+
+.titlebar button.titlebutton:hover,
+headerbar button.titlebutton:hover {
+  background-color: #4F4EE6;
+}
+
+.titlebar button.titlebutton:active,
+headerbar button.titlebutton:active {
+  background-color: #3937E1;
+}
+
+.titlebar button.titlebutton.close:hover,
+headerbar button.titlebutton.close:hover {
+  background-color: #D19ACA;
+  color: #4140E4;
+}
+
+.titlebar button.titlebutton.maximize:hover,
+headerbar button.titlebutton.maximize:hover,
+.titlebar button.titlebutton.minimize:hover,
+headerbar button.titlebutton.minimize:hover {
+  background-color: #A4A3FF;
+  color: #4140E4;
+}
+
+.titlebar .title,
+headerbar .title {
+  font-weight: bold;
+  color: #A4A3FF;
+  padding: 0 8px;
+}
+
+.titlebar .subtitle,
+headerbar .subtitle {
+  color: #827FEB;
+  font-size: smaller;
+}
+
+/* Toolbars */
+toolbar {
+  background-color: #4140E4;
+  color: #A4A3FF;
+  border: none;
+  padding: 0;
+}
+
+toolbar.horizontal {
+  border-bottom: 1px solid #A4A3FF;
+}
+
+toolbar.vertical {
+  border-right: 1px solid #A4A3FF;
+}
+
+toolbar separator.horizontal {
+  min-height: 1px;
+  margin: 0 4px;
+}
+
+toolbar separator.vertical {
+  min-width: 1px;
+  margin: 4px 0;
+}
+
+/* Notebooks (tabs) */
+notebook {
+  background-color: #4140E4;
+}
+
+notebook header {
+  background-color: #4140E4;
+  border: 1px solid #A4A3FF;
+}
+
+notebook header.top {
+  border-bottom: 1px solid #A4A3FF;
+}
+
+notebook header.bottom {
+  border-top: 1px solid #A4A3FF;
+}
+
+notebook header.left {
+  border-right: 1px solid #A4A3FF;
+}
+
+notebook header.right {
+  border-left: 1px solid #A4A3FF;
+}
+
+notebook header tabs {
+  background-color: transparent;
+}
+
+notebook header tabs tab {
+  background-color: transparent;
+  color: #827FEB;
+  border: none;
+  padding: 2px 4px;
+  margin: 0;
+}
+
+notebook header tabs tab:hover {
+  background-color: #4F4EE6;
+  color: #A4A3FF;
+}
+
+notebook header tabs tab:checked {
+  background-color: #4140E4;
+  color: #A4A3FF;
+  border-bottom: 1px solid #A4A3FF;
+}
+
+notebook header tabs tab:backdrop {
+  color: #827FEB;
+}
+
+notebook header tabs tab:backdrop:checked {
+  color: #827FEB;
+  border-color: #827FEB;
+}
+
+notebook > stack {
+  background-color: #4140E4;
+  border: 1px solid #A4A3FF;
+  border-top: 1px solid #A4A3FF;
+}
+
+/* Lists and tree views */
+listbox,
+list {
+  background-color: #4140E4;
+  color: #A4A3FF;
+  border: 1px solid #A4A3FF;
+  border-radius: 0;
+}
+
+listbox row,
+list row {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  padding: 1px 2px;
+}
+
+listbox row:hover,
+list row:hover {
+  background-color: #4F4EE6;
+}
+
+listbox row:active,
+list row:active {
+  background-color: #3937E1;
+}
+
+listbox row:selected,
+list row:selected {
+  background-color: #A4A3FF;
+  color: #4140E4;
+}
+
+listbox row:selected:hover,
+list row:selected:hover {
+  background-color: #AFAEFF;
+}
+
+listbox row:disabled,
+list row:disabled {
+  color: #7673E9;
+  background-color: transparent;
+}
+
+listbox separator,
+list separator {
+  background-color: #A4A3FF;
+  min-height: 1px;
+  margin: 0;
+}
+
+/* Tree views */
+treeview {
+  background-color: #4140E4;
+  color: #A4A3FF;
+  border: 1px solid #A4A3FF;
+}
+
+treeview:selected {
+  background-color: #A4A3FF;
+  color: #4140E4;
+}
+
+treeview header {
+  background-color: #4443E4;
+  color: #A4A3FF;
+  border-bottom: 1px solid #A4A3FF;
+}
+
+treeview header button {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  border-right: 1px solid #A4A3FF;
+  border-radius: 0;
+  padding: 1px 3px;
+}
+
+treeview header button:hover {
+  background-color: #4F4EE6;
+}
+
+treeview header button:active {
+  background-color: #3937E1;
+}
+
+treeview header button:last-child {
+  border-right: none;
+}
+
+treeview expander {
+  min-width: 16px;
+  min-height: 16px;
+  -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+  color: #827FEB;
+}
+
+treeview expander:checked {
+  -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+}
+
+treeview expander:hover {
+  color: #A4A3FF;
+}
+
+/* Nested containers should have no padding for lean look */
+
+/* Remove padding for nested lists and boxes */
+box box,
+list list,
+listbox listbox {
+  padding: 0;
+  margin: 0;
+}
+
+/* Nested menu items */
+menu menu {
+  padding: 0;
+}
+
+/* Nested frames */
+.frame .frame {
+  padding: 0;
+  border: none;
+}
