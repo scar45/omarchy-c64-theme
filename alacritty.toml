@@ -1,0 +1,23 @@
+# Colors (C64)
+
+[colors.normal]
+black   = "#463a3a"
+red     = "#D3AAAC"
+green   = "#A4D08C"
+yellow  = "#CBBA80"
+blue    = "#BBACDA"
+magenta = "#D1A0D3"
+cyan    = "#95C7D7"
+white   = "#FFFFFF"
+
+[colors.cursor]
+cursor = '#A4A3FF'
+text = '#A4A3FF'
+
+[colors.primary]
+background = '#4140E4'
+foreground = '#A4A3FF'
+
+[colors.selection]
+background = '#A4A3FF'
+text = '#4140E4'

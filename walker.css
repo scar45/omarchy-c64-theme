@@ -1,0 +1,29 @@
+@define-color selected-text #4140E4;
+@define-color text #A4A2FF;
+@define-color base #4140E4;
+@define-color border #A4A2FF;
+@define-color foreground #4140E4;
+@define-color background #A4A2FF;
+
+#box {
+  padding: 10px;
+  border: 8px solid @border;
+}
+
+child:selected,
+child:hover {
+  color: @base;
+  background: @text;
+}
+
+#text {
+  padding: 14px 0;
+}
+
+child:selected #text,
+child:selected #label,
+child:hover #text,
+child:hover #label {
+  color: @base;
+  background: @text;
+}

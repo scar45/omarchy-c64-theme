@@ -1,0 +1,30 @@
+@define-color foreground #A4A3FF;
+@define-color background #4140E4;
+
+* {
+  background-color: @background;
+  color: @foreground;
+  font-family: "C64 Pro";
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#waybar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#workspaces button.active {
+    color: #A4A3FF;
+    background-color: rgba(0,0,0,0.0);
+}
+
+#workspaces button.active label {
+    color: #A4A3FF;
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    color: #FFBBBB;
+    background-color: rgba(0,0,0,0.0);
+}

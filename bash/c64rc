@@ -1,0 +1,20 @@
+alias RUN=''
+alias home='cd ~/'
+alias h='home'
+alias reload='clear && source ~/.bashrc'
+
+alias gs='git status'
+alias gb='git branch -v'
+alias gr='git remote -v'
+
+alias fakehack='cat /dev/urandom | hexdump -C | grep "ca fe"'
+
+memfree=`free -b | sed -n 2p | awk '{ print $4 }'`
+memtotal=`free | sed -n 2p | awk '{ print $2 }'`
+cputype=`grep -m1 'model name' /proc/cpuinfo | cut -c 13-40`
+kernelver=`uname -a | awk '{print $1" "$3}' | sed 's/.\{8\}$//'`
+ipaddr=`ip addr show | grep 'inet ' | grep -v '127.0.0.1' | head -1 | awk '{print $2}' | cut -d'/' -f1`
+
+printf "\n       **** COMMODORE 64 BASIC V2 ****\n\n  ${memtotal}K RAM SYSTEM  $memfree BYTES FREE\n  ${kernelver} KERNEL  IP ${ipaddr}\n\nREADY."
+
+PS1="\u@\h:\w\nREADY\n"

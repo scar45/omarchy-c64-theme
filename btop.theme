@@ -1,0 +1,35 @@
+# ────────────────────────────────────────────────────────────
+# Bashtop theme - C64 Omarchy
+# by George Merlocco
+# https://george.merloc.co/posts/omarchy
+# ────────────────────────────────────────────────────────────
+
+theme[main_bg]="#4140E4"
+theme[main_fg]="#A4A2FF"
+
+theme[selected_bg]="#A4A2FF"
+theme[selected_fg]="#4140E4"
+
+theme[title]="#A4A2FF"
+
+theme[hi_fg]="#A4A2FF"
+
+theme[inactive_fg]="#A4A2FF"
+
+theme[proc_misc]="#A4A2FF"
+
+theme[cpu_box]="#A4A2FF"
+theme[mem_box]="#A4A2FF"
+theme[net_box]="#A4A2FF"
+theme[proc_box]="#A4A2FF"
+
+theme[div_line]="#A4A2FF"
+
+theme[temp_start]="#A4A2FF"
+theme[cpu_start]="#A4A2FF"
+theme[free_start]="#A4A2FF"
+theme[cached_start]="#A4A2FF"
+theme[available_start]="#A4A2FF"
+theme[used_start]="#A4A2FF"
+theme[download_start]="#A4A2FF"
+theme[upload_start]="#A4A2FF"

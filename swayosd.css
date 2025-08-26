@@ -1,0 +1,16 @@
+@define-color background-color #4140E4;
+@define-color border-color #A4A2FF;
+@define-color label #A4A2FF;
+@define-color image #A4A2FF;
+@define-color progress #A4A2FF;
+
+window {
+  border-radius: 0;
+  opacity: 1.0;
+  border: 12px solid @border-color;
+}
+
+label {
+  font-family: 'C64 Pro';
+  font-size: 12pt;
+}
