@@ -9,7 +9,8 @@ I adore the Commodore 64, and if you do too, you may enjoy this theme for Omarch
 
 ### Option 1
 
-Use the built-in tool from the terminal: `omarchy-theme-install https://github.com/scar45/omarchy-c64-theme`
+Use the built-in tool from the terminal:
+`omarchy-theme-install https://github.com/scar45/omarchy-c64-theme`
 
 ### Option 2
 
@@ -17,9 +18,9 @@ Copy `https://github.com/scar45/omarchy-c64-theme`, then open the main Omarchy m
 
 ## Extras
 
-_Run `./install-extras.sh` (after auditing of course!)_
-
 - Bash splash text mimicking the C64 ram check (counts your actual RAM in bytes!)
 		- Check `bash/c64rc` which adds some aliases as well
 - Waybar font change
 - Omarchy screensaver ascii change to Commodore logo
+
+Run `./install-extras.sh` _(after auditing of course!)_ to backup original files and copy these extra resources from the theme.
