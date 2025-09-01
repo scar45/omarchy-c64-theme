@@ -3,10 +3,6 @@ alias home='cd ~/'
 alias h='home'
 alias reload='clear && source ~/.bashrc'
 
-alias gs='git status'
-alias gb='git branch -v'
-alias gr='git remote -v'
-
 alias fakehack='cat /dev/urandom | hexdump -C | grep "ca fe"'
 
 memfree=`free -b | sed -n 2p | awk '{ print $4 }'`
