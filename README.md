@@ -1,7 +1,7 @@
 # Commodore 64 Theme for Omarchy
 `omarchy-c64-theme`
 
-I adore the Commodore 64, and if you do too, you may enjoy this theme for Omarchy. It's a fully-featured, retro-style throwback to the days of the C64, with its iconic double-blue palette, and chonky fonts.
+I adore the Commodore 64, and if you do too, you may enjoy this theme for Omarchy. It's a fully-featured, retro-style throwback to the days of the C64, with its iconic double-blue palette, and chonky fonts. Find more [screenshots here](./screenies/).
 
 ![C64 Omarchy Theme Screenshot](theme.png)
 
@@ -37,10 +37,7 @@ Run `./install-extras.sh` _(after auditing of course!)_ to backup original files
 
 I wrote up [a blog post](https://george.merloc.co/posts/omarchy-c64x/) on this theme, and the legacy C64x system (with a _CRT_ display 480p) that I run it on.
 
-## Background Credits
-
-- [Wallpaper Cave](https://wallpapercave.com/commodore-64-wallpapers)
-- [Super Mario Bros. 3](https://rockybergen.com/whatsnew/2016/8/27/commodore-64-super-mario-bros-3-loader-graphic)
+Background credits per [Wallpaper Cave](https://wallpapercave.com/commodore-64-wallpapers)
 
 ---
 
