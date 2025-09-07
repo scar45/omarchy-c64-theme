@@ -17,10 +17,11 @@ else
     echo "- C64 bash config already in ~/.bashrc"
 fi
 
-# Comment out font-family line in waybar default style.css
+# Install C64 GTK Theme	
 
-sed -i 's/^[[:space:]]*font-family\([^;]*;\)/\/\* font-family\1 \*\//' ~/.config/waybar/style.css
-echo "- Commented out font-family line in waybar default style.css"
+mkdir -p ~/.local/share/themes/c64-gtk-theme
+cp -r ~/.config/omarchy/themes/c64/c64-gtk-theme/* ~/.local/share/themes/c64-gtk-theme
+echo "- Installed C64 GTK Theme"
 
 # Backup existing screensaver and replace with C64 version (only if backup doesn't exist)
 
